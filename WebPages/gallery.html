@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>This is gallery </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ </head>
+   <body>    
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+			
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="activ"><a href="index.html">Home</a></li>
+					<li><a href="profile.html">Profile</a>
+					</li>
+					<li><a href="gallery.html">Gallery</a></li>
+					
+				</ul>
+			</div>
+		</div>	
+	</nav>
+
+	<div class="container">
+		<div class="col-md-6">
+	<img src="img/chicago.jpg" id="mainImage">
+		</div>
+	</div>
+    </body>			
+
+    <script type="text/javascript">
+	var myImage = document.getElementById('mainImage');
+	var imageArray = ["img/chicago.jpg","img/annarbor.jpg","img/houston.jpg","img/dallas.jpg"];
+	var imageIndex = 1;
+
+	function changeImage(){
+		myImage.setAttribute("src", imageArray[imageIndex]);imageIndex++;
+		if (imageIndex > 3) {imageIndex = 0;}
+	}
+    </script>
+    <button onclick="changeImage()">Next</button>
+</html>
